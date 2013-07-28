@@ -1,0 +1,14 @@
+from the Q&A section on tama-ps.com:
+
+Maximum Download Storage on the Tamagotchi P's
+
+Location____________ Maximum number of downloaded items you can store there
+Restaurant__________ 20 meals
+Music Cafe__________ 15 snacks
+Game Center__________ 2 games
+Gotchi Reform_______ 10 living room wallpapers
+Tama Depa___________ 10 items
+Tamamori Shop________ 5 clothes plus 10 accessories
+Travel Destinations__ 2 destinations
+Connection Play______ 4 recipes
+Treasure Chest______ 20 letters plus 1 stamp card

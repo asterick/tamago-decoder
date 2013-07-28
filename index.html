@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tamagotchi Download Decoder</title>
+		<link rel="stylesheet" type="text/css" href="source/style.css">
+	</head>
+	<body>
+		<nav></nav>
+		<info></info>
+
+		<script type='text/javascript' src='source/struct.js'></script>
+		<script type='text/javascript' src='source/tamago.js'></script>
+		<script type='text/javascript'>
+			!function() {
+				var xhr = new XMLHttpRequest();
+				xhr.open("GET","downloads.index", false);
+				xhr.send(null);
+
+				document.querySelector("nav").innerHTML = xhr.response.split("\n").map(function (name) {
+					return "<a href='#"+name+"'>"+name.split("/").pop()+"</a>"
+				}).join('');
+
+				function load() {
+					var name = window.location.hash.substr(1),
+						xhr = new XMLHttpRequest();
+
+					if (!name) return ;
+
+					xhr.open("GET", name, true);
+					xhr.responseType = "arraybuffer";
+					xhr.send(null);
+					xhr.onreadystatechange = function () {
+						if (xhr.readyState !== 4 || xhr.status !== 200) { return ; }
+						image(document.querySelector("info"), name, xhr.response);
+					}
+				}
+
+				window.addEventListener("hashchange", load);
+				load();
+			}();
+		</script>
+	</body>
+</html>
