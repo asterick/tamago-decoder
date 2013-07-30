@@ -10,9 +10,10 @@ big {
 	unsigned:16	_54_unknown;
 	unsigned:16	_56_unknown;
 	unsigned:16	_58_unknown;
-	unsigned:32 _5a_serial_number;
+	unsigned:16 _5a_serial_number;
+	unsigned:16 _5c_zero;
 	unsigned:8	_5e_catalog_name[10];
-	unsigned:8	_69_unknown_food_flag;
+	unsigned:16     _68_id_entry_point;
 	unsigned:16	_6a_zero;
 	unsigned:16	_6c_price;
 	unsigned:16	_6e_unknown_items_icon_bar;
